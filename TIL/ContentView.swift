@@ -9,9 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showSplashScreen = true
+    @ObservedObject var keyboardResponder = KeyboardResponder()
     var body: some View {
         ZStack {
-            Text("hello world")
+            AddTILBubbleView()
+                .cornerRadius(24)
+                .padding(50)
+
             if showSplashScreen {
                 SplashScreen().onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -22,6 +26,9 @@ struct ContentView: View {
                 }
             }
         }
+        .offset(y: -keyboardResponder.currentHeight*0.01)
+
+        .preferredColorScheme(.light)
 
     }
 }

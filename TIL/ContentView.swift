@@ -8,9 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showSplashScreen = true
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            Text("hello world")
+            if showSplashScreen {
+                SplashScreen().onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        withAnimation(.easeInOut) {
+                        self.showSplashScreen = false
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
 

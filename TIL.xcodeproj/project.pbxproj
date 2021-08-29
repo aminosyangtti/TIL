@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD1A9FA826DB7E1800B9E403 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FA726DB7E1800B9E403 /* SplashScreen.swift */; };
+		BD1A9FB226DB84B300B9E403 /* CustomColorInHex+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FB126DB84B300B9E403 /* CustomColorInHex+extension.swift */; };
+		BD1A9FB426DB983F00B9E403 /* SplashBubblesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FB326DB983F00B9E403 /* SplashBubblesView.swift */; };
 		BD92391E26DB7D52003A02EF /* TILApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92391D26DB7D52003A02EF /* TILApp.swift */; };
 		BD92392026DB7D52003A02EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92391F26DB7D52003A02EF /* ContentView.swift */; };
 		BD92392226DB7D53003A02EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD92392126DB7D53003A02EF /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD1A9FA726DB7E1800B9E403 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		BD1A9FB126DB84B300B9E403 /* CustomColorInHex+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CustomColorInHex+extension.swift"; sourceTree = "<group>"; };
+		BD1A9FB326DB983F00B9E403 /* SplashBubblesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBubblesView.swift; sourceTree = "<group>"; };
 		BD92391A26DB7D52003A02EF /* TIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD92391D26DB7D52003A02EF /* TILApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILApp.swift; sourceTree = "<group>"; };
 		BD92391F26DB7D52003A02EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,7 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				BD92391D26DB7D52003A02EF /* TILApp.swift */,
+				BD1A9FB126DB84B300B9E403 /* CustomColorInHex+extension.swift */,
 				BD92391F26DB7D52003A02EF /* ContentView.swift */,
+				BD1A9FA726DB7E1800B9E403 /* SplashScreen.swift */,
+				BD1A9FB326DB983F00B9E403 /* SplashBubblesView.swift */,
 				BD92392126DB7D53003A02EF /* Assets.xcassets */,
 				BD92392626DB7D53003A02EF /* Info.plist */,
 				BD92392326DB7D53003A02EF /* Preview Content */,
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1A9FA826DB7E1800B9E403 /* SplashScreen.swift in Sources */,
 				BD92392026DB7D52003A02EF /* ContentView.swift in Sources */,
+				BD1A9FB226DB84B300B9E403 /* CustomColorInHex+extension.swift in Sources */,
 				BD92391E26DB7D52003A02EF /* TILApp.swift in Sources */,
+				BD1A9FB426DB983F00B9E403 /* SplashBubblesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

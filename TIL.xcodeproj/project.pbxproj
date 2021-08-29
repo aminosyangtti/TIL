@@ -15,6 +15,7 @@
 		BD1A9FBE26DBAE0100B9E403 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FBD26DBAE0100B9E403 /* VisualEffectView.swift */; };
 		BD1A9FC026DBBD4200B9E403 /* KeyResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FBF26DBBD4200B9E403 /* KeyResponder.swift */; };
 		BD1A9FC626DBC75600B9E403 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FC526DBC75600B9E403 /* AddButton.swift */; };
+		BD1A9FC826DBC87900B9E403 /* DimViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FC726DBC87900B9E403 /* DimViewModifier.swift */; };
 		BD92391E26DB7D52003A02EF /* TILApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92391D26DB7D52003A02EF /* TILApp.swift */; };
 		BD92392026DB7D52003A02EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92391F26DB7D52003A02EF /* ContentView.swift */; };
 		BD92392226DB7D53003A02EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD92392126DB7D53003A02EF /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		BD1A9FBD26DBAE0100B9E403 /* VisualEffectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		BD1A9FBF26DBBD4200B9E403 /* KeyResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyResponder.swift; sourceTree = "<group>"; };
 		BD1A9FC526DBC75600B9E403 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		BD1A9FC726DBC87900B9E403 /* DimViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimViewModifier.swift; sourceTree = "<group>"; };
 		BD92391A26DB7D52003A02EF /* TIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD92391D26DB7D52003A02EF /* TILApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILApp.swift; sourceTree = "<group>"; };
 		BD92391F26DB7D52003A02EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,18 +58,18 @@
 				BD1A9FC526DBC75600B9E403 /* AddButton.swift */,
 				BD1A9FB926DBABA500B9E403 /* AddTILBubbleView.swift */,
 				BD1A9FC426DBC02500B9E403 /* SplashScreen */,
-				BD1A9FC226DBBFC400B9E403 /* Custom */,
+				BD1A9FC226DBBFC400B9E403 /* CustomViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		BD1A9FC226DBBFC400B9E403 /* Custom */ = {
+		BD1A9FC226DBBFC400B9E403 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				BD1A9FBB26DBAC0700B9E403 /* CustomMultilineTextFieldView.swift */,
 				BD1A9FBD26DBAE0100B9E403 /* VisualEffectView.swift */,
 			);
-			path = Custom;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		BD1A9FC326DBBFE500B9E403 /* ViewModels */ = {
@@ -85,6 +87,22 @@
 				BD1A9FB326DB983F00B9E403 /* SplashBubblesView.swift */,
 			);
 			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		BD1A9FC926DBCAD100B9E403 /* CustomViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				BD1A9FC726DBC87900B9E403 /* DimViewModifier.swift */,
+			);
+			path = CustomViewModifiers;
+			sourceTree = "<group>";
+		};
+		BD1A9FCA26DBCB0F00B9E403 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD1A9FB126DB84B300B9E403 /* CustomColorInHex+extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BD92391126DB7D52003A02EF = {
@@ -107,9 +125,10 @@
 			isa = PBXGroup;
 			children = (
 				BD92391D26DB7D52003A02EF /* TILApp.swift */,
-				BD1A9FB126DB84B300B9E403 /* CustomColorInHex+extension.swift */,
-				BD1A9FC126DBBFAA00B9E403 /* Views */,
 				BD1A9FC326DBBFE500B9E403 /* ViewModels */,
+				BD1A9FC126DBBFAA00B9E403 /* Views */,
+				BD1A9FC926DBCAD100B9E403 /* CustomViewModifiers */,
+				BD1A9FCA26DBCB0F00B9E403 /* Extensions */,
 				BD92392126DB7D53003A02EF /* Assets.xcassets */,
 				BD92392626DB7D53003A02EF /* Info.plist */,
 				BD92392326DB7D53003A02EF /* Preview Content */,
@@ -195,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD1A9FBA26DBABA500B9E403 /* AddTILBubbleView.swift in Sources */,
+				BD1A9FC826DBC87900B9E403 /* DimViewModifier.swift in Sources */,
 				BD1A9FBC26DBAC0700B9E403 /* CustomMultilineTextFieldView.swift in Sources */,
 				BD1A9FA826DB7E1800B9E403 /* SplashScreen.swift in Sources */,
 				BD1A9FC626DBC75600B9E403 /* AddButton.swift in Sources */,

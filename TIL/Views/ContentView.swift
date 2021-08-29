@@ -14,37 +14,31 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             AddButton(showAddBubble: $showAddBubble)
-                .overlay(Rectangle()
-                            .foregroundColor(showAddBubble ? .gray.opacity(0.3): .clear)
-                            .onTapGesture {
-                    withAnimation(.spring()) {
-                        self.showAddBubble = false
-                    }
-                }
-                            .ignoresSafeArea())
-
+                .dimView($showAddBubble)
 
             if showAddBubble {
-            AddTILBubbleView()
-                .cornerRadius(24)
-                .padding(50)
-                .transition(.scale)
+                AddTILBubbleView()
+                    .cornerRadius(24)
+                    .padding(50)
+                    .transition(.scale)
             }
 
             if showSplashScreen {
-                SplashScreen().onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                        withAnimation(.easeInOut) {
-                        self.showSplashScreen = false
+                SplashScreen()
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            withAnimation(.easeInOut) {
+                                self.showSplashScreen = false
+                            }
+
                         }
+
                     }
-                }
             }
+
         }
         .offset(y: -keyboardResponder.currentHeight*0.01)
-        
         .preferredColorScheme(.light)
-
     }
 }
 

@@ -17,9 +17,10 @@ struct AddTILBubbleView: View {
             Text("What did you learn today?")
                 .font(.title)
                 .fontWeight(.bold)
+            
 
             MultilineTextField(shouldShowPlaceholder: State<Bool>(initialValue: AddTILBubbleView.text.isEmpty), "Today I learned...", nextResponder: $isFirstResponder, isResponder: $isFirstResponder, keyboard: .default, text: AddTILBubbleView.textBinding)
-                .background(VisualEffectView(style: .systemMaterialDark).opacity(0.3))
+                .background(VisualEffectView(style: .systemMaterialLight).opacity(0.3))
                 .cornerRadius(10.0)
 
 
@@ -42,7 +43,7 @@ struct AddTILBubbleView: View {
             }
         }
         .padding()
-        .background( VisualEffectView(style:  .systemChromeMaterialLight).opacity(0.6))
+        .background( VisualEffectView(style:  .systemUltraThinMaterialDark).opacity(1))
 
     }
     func share() {

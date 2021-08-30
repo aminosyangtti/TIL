@@ -13,9 +13,15 @@ struct ContentView: View {
     @State private var showAddBubble = false
     var body: some View {
         ZStack {
+            ZStack {
+            if !showSplashScreen {
+            BubblesContentView()
+            }
             AddButton(showAddBubble: $showAddBubble)
-                .dimView($showAddBubble)
+            }
+            .dimView($showAddBubble)
 
+            
             if showAddBubble {
                 AddTILBubbleView()
                     .cornerRadius(24)

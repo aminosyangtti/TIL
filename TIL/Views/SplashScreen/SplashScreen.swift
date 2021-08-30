@@ -7,21 +7,8 @@
 
 import SwiftUI
 
-var color = ["6DA49A", "CCD39C", "73B3CE", "222F3E", "92A5E6"].randomElement()!
+var color = ["6DA49A", "CCD39C", "73B3CE", "222F3E", "92A5E6"]
 
-var color2 = ["6DA49A", "CCD39C", "73B3CE", "222F3E", "92A5E6"].randomElement()!
-
-
-var color3 = ["6DA49A", "CCD39C", "73B3CE", "222F3E", "92A5E6"].randomElement()!
-
-
-var color4 = ["6DA49A", "CCD39C", "73B3CE", "222F3E", "92A5E6"].randomElement()!
-
-
-var color5 = ["6DA49A", "CCD39C", "73B3CE", "222F3E", "92A5E6"].randomElement()!
-
-
-var color6 = ["6DA49A", "CCD39C", "73B3CE", "222F3E", "92A5E6"].randomElement()!
 
 struct SplashScreen: View {
     @State private var show = false

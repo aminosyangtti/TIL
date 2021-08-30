@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B137FD5DC8E543DBB3E9F07C /* Pods_TIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E99C53C50C8F4CE704D12A5 /* Pods_TIL.framework */; };
 		BD184DBE26DCDB4000D85123 /* GridStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD184DBD26DCDB4000D85123 /* GridStackView.swift */; };
+		BD184DC026DCE11500D85123 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD184DBF26DCE11500D85123 /* User.swift */; };
+		BD184DC326DCE19600D85123 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD184DC226DCE19600D85123 /* SessionStore.swift */; };
 		BD1A9FA826DB7E1800B9E403 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FA726DB7E1800B9E403 /* SplashScreen.swift */; };
 		BD1A9FB226DB84B300B9E403 /* CustomColorInHex+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FB126DB84B300B9E403 /* CustomColorInHex+extension.swift */; };
 		BD1A9FB426DB983F00B9E403 /* SplashBubblesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FB326DB983F00B9E403 /* SplashBubblesView.swift */; };
@@ -30,6 +32,8 @@
 		6E99C53C50C8F4CE704D12A5 /* Pods_TIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		803AB92BBB370D96BFC346DF /* Pods-TIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TIL.release.xcconfig"; path = "Target Support Files/Pods-TIL/Pods-TIL.release.xcconfig"; sourceTree = "<group>"; };
 		BD184DBD26DCDB4000D85123 /* GridStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStackView.swift; sourceTree = "<group>"; };
+		BD184DBF26DCE11500D85123 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BD184DC226DCE19600D85123 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		BD1A9FA726DB7E1800B9E403 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		BD1A9FB126DB84B300B9E403 /* CustomColorInHex+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CustomColorInHex+extension.swift"; sourceTree = "<group>"; };
 		BD1A9FB326DB983F00B9E403 /* SplashBubblesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBubblesView.swift; sourceTree = "<group>"; };
@@ -79,6 +83,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BD184DC126DCE16700D85123 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD184DBF26DCE11500D85123 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BD1A9FC126DBBFAA00B9E403 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				BD1A9FBF26DBBD4200B9E403 /* KeyResponder.swift */,
+				BD184DC226DCE19600D85123 /* SessionStore.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -158,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				BD92391D26DB7D52003A02EF /* TILApp.swift */,
+				BD184DC126DCE16700D85123 /* Models */,
 				BD1A9FC326DBBFE500B9E403 /* ViewModels */,
 				BD1A9FC126DBBFAA00B9E403 /* Views */,
 				BD1A9FC926DBCAD100B9E403 /* CustomViewModifiers */,
@@ -280,11 +294,13 @@
 				BD1A9FC026DBBD4200B9E403 /* KeyResponder.swift in Sources */,
 				BD1A9FCC26DBCC0D00B9E403 /* BubbleView.swift in Sources */,
 				BD92392026DB7D52003A02EF /* ContentView.swift in Sources */,
+				BD184DC026DCE11500D85123 /* User.swift in Sources */,
 				BD1A9FB226DB84B300B9E403 /* CustomColorInHex+extension.swift in Sources */,
 				BD1A9FBE26DBAE0100B9E403 /* VisualEffectView.swift in Sources */,
 				BD92391E26DB7D52003A02EF /* TILApp.swift in Sources */,
 				BD184DBE26DCDB4000D85123 /* GridStackView.swift in Sources */,
 				BD1A9FCE26DBE54B00B9E403 /* BubblesContentView.swift in Sources */,
+				BD184DC326DCE19600D85123 /* SessionStore.swift in Sources */,
 				BD1A9FB426DB983F00B9E403 /* SplashBubblesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

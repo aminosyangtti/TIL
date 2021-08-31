@@ -13,6 +13,7 @@
 		BD184DC326DCE19600D85123 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD184DC226DCE19600D85123 /* SessionStore.swift */; };
 		BD184DC526DD579200D85123 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD184DC426DD579200D85123 /* Bubble.swift */; };
 		BD184DC726DD582700D85123 /* BubblesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD184DC626DD582700D85123 /* BubblesViewModel.swift */; };
+		BD184DC926DD600F00D85123 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD184DC826DD600F00D85123 /* SignInView.swift */; };
 		BD1A9FA826DB7E1800B9E403 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FA726DB7E1800B9E403 /* SplashScreen.swift */; };
 		BD1A9FB226DB84B300B9E403 /* CustomColorInHex+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FB126DB84B300B9E403 /* CustomColorInHex+extension.swift */; };
 		BD1A9FB426DB983F00B9E403 /* SplashBubblesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FB326DB983F00B9E403 /* SplashBubblesView.swift */; };
@@ -24,6 +25,7 @@
 		BD1A9FC826DBC87900B9E403 /* DimViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FC726DBC87900B9E403 /* DimViewModifier.swift */; };
 		BD1A9FCC26DBCC0D00B9E403 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FCB26DBCC0C00B9E403 /* BubbleView.swift */; };
 		BD1A9FCE26DBE54B00B9E403 /* BubblesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FCD26DBE54B00B9E403 /* BubblesContentView.swift */; };
+		BD6D4E7126DE313800531553 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6D4E7026DE313800531553 /* CustomTextField.swift */; };
 		BD92391E26DB7D52003A02EF /* TILApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92391D26DB7D52003A02EF /* TILApp.swift */; };
 		BD92392026DB7D52003A02EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92391F26DB7D52003A02EF /* ContentView.swift */; };
 		BD92392226DB7D53003A02EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD92392126DB7D53003A02EF /* Assets.xcassets */; };
@@ -38,6 +40,7 @@
 		BD184DC226DCE19600D85123 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		BD184DC426DD579200D85123 /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		BD184DC626DD582700D85123 /* BubblesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesViewModel.swift; sourceTree = "<group>"; };
+		BD184DC826DD600F00D85123 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		BD1A9FA726DB7E1800B9E403 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		BD1A9FB126DB84B300B9E403 /* CustomColorInHex+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CustomColorInHex+extension.swift"; sourceTree = "<group>"; };
 		BD1A9FB326DB983F00B9E403 /* SplashBubblesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBubblesView.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		BD1A9FC726DBC87900B9E403 /* DimViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimViewModifier.swift; sourceTree = "<group>"; };
 		BD1A9FCB26DBCC0C00B9E403 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		BD1A9FCD26DBE54B00B9E403 /* BubblesContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesContentView.swift; sourceTree = "<group>"; };
+		BD6D4E7026DE313800531553 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		BD92391A26DB7D52003A02EF /* TIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD92391D26DB7D52003A02EF /* TILApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILApp.swift; sourceTree = "<group>"; };
 		BD92391F26DB7D52003A02EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			children = (
 				BD92391F26DB7D52003A02EF /* ContentView.swift */,
 				BD1A9FC526DBC75600B9E403 /* AddButton.swift */,
+				BD184DC826DD600F00D85123 /* SignInView.swift */,
 				BD1A9FCB26DBCC0C00B9E403 /* BubbleView.swift */,
 				BD1A9FCD26DBE54B00B9E403 /* BubblesContentView.swift */,
 				BD1A9FB926DBABA500B9E403 /* AddTILBubbleView.swift */,
@@ -115,6 +120,7 @@
 			children = (
 				BD184DBD26DCDB4000D85123 /* GridStackView.swift */,
 				BD1A9FBB26DBAC0700B9E403 /* CustomMultilineTextFieldView.swift */,
+				BD6D4E7026DE313800531553 /* CustomTextField.swift */,
 				BD1A9FBD26DBAE0100B9E403 /* VisualEffectView.swift */,
 			);
 			path = CustomViews;
@@ -296,12 +302,14 @@
 				BD1A9FC826DBC87900B9E403 /* DimViewModifier.swift in Sources */,
 				BD1A9FBC26DBAC0700B9E403 /* CustomMultilineTextFieldView.swift in Sources */,
 				BD1A9FA826DB7E1800B9E403 /* SplashScreen.swift in Sources */,
+				BD6D4E7126DE313800531553 /* CustomTextField.swift in Sources */,
 				BD1A9FC626DBC75600B9E403 /* AddButton.swift in Sources */,
 				BD1A9FC026DBBD4200B9E403 /* KeyResponder.swift in Sources */,
 				BD1A9FCC26DBCC0D00B9E403 /* BubbleView.swift in Sources */,
 				BD92392026DB7D52003A02EF /* ContentView.swift in Sources */,
 				BD184DC726DD582700D85123 /* BubblesViewModel.swift in Sources */,
 				BD184DC526DD579200D85123 /* Bubble.swift in Sources */,
+				BD184DC926DD600F00D85123 /* SignInView.swift in Sources */,
 				BD184DC026DCE11500D85123 /* User.swift in Sources */,
 				BD1A9FB226DB84B300B9E403 /* CustomColorInHex+extension.swift in Sources */,
 				BD1A9FBE26DBAE0100B9E403 /* VisualEffectView.swift in Sources */,

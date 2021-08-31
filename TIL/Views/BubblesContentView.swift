@@ -10,7 +10,7 @@ import SwiftUI
 
 struct BubblesContentView: View {
     @State private var isPresent = false
-    var rows = [GridItem(.flexible())]
+//    var rows = [GridItem(.flexible())]
 
 
     var body: some View {

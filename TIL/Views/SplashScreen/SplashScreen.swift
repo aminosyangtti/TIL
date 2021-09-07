@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-var color = ["6DA49A", "CCD39C", "73B3CE", "222F3E", "92A5E6"]
+var color = ["75BF97", "A77EBF", "76BF6B", "BF6158", "AFBF62", "7E9CBF"].shuffled()
 
 
 struct SplashScreen: View {

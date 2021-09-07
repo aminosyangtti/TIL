@@ -35,6 +35,7 @@
 		BD92392526DB7D53003A02EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD92392426DB7D53003A02EF /* Preview Assets.xcassets */; };
 		BDB3662E26E77C5D00A98D96 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB3662D26E77C5D00A98D96 /* SignUpView.swift */; };
 		BDB3663026E7838700A98D96 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB3662F26E7838700A98D96 /* HomeScreenView.swift */; };
+		BDBDEACE26E822B200996737 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBDEACD26E822B200996737 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		BD92392626DB7D53003A02EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDB3662D26E77C5D00A98D96 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BDB3662F26E7838700A98D96 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		BDBDEACD26E822B200996737 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		F0319D9298D8044360E71F89 /* Pods-TIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TIL.debug.xcconfig"; path = "Target Support Files/Pods-TIL/Pods-TIL.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				BD1A9FB126DB84B300B9E403 /* CustomColorInHex+extension.swift */,
+				BDBDEACD26E822B200996737 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDBDEACE26E822B200996737 /* Date+Extension.swift in Sources */,
 				BD8DFDA726E7F8A700E1061E /* PushNotificationManager.swift in Sources */,
 				BD8DFDA426E7F88B00E1061E /* AppDelegate.swift in Sources */,
 				BD1A9FBA26DBABA500B9E403 /* AddTILBubbleView.swift in Sources */,

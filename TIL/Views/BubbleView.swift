@@ -22,10 +22,12 @@ struct BubbleView: View {
     var formatter: DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
-        dateFormatter.timeStyle = .medium
+        dateFormatter.timeStyle = .long
         return dateFormatter
     }
     let user = Auth.auth().currentUser
+
+    @State private var showDate = false
 
 
     @State private var enlarge = false
@@ -38,9 +40,12 @@ struct BubbleView: View {
                     .fontWeight(.semibold)
                 Spacer()
 
-                Text(formatter.string(from: timeStamp))
+                Text(showDate ? formatter.string(from: timeStamp): timeStamp.timeAgoDisplay())
                     .font(.footnote)
                     .foregroundColor(.gray)
+                    .onTapGesture {
+                        self.showDate.toggle()
+                    }
             }
 
             ZStack {
@@ -65,7 +70,7 @@ struct BubbleView: View {
                 Image(systemName:
                         likedBy.contains(user!.uid) ? "suit.heart.fill" :
                         "suit.heart")
-                    .foregroundColor(Color(hex: color))
+                    .foregroundColor( likedBy.contains(user!.uid) ? Color(hex: "C23023") : .black)
                     .onTapGesture {
                        likeUnlike()
                     }

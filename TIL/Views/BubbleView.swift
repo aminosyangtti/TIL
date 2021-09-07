@@ -6,53 +6,96 @@
 //
 
 import SwiftUI
+import Firebase
+
+var rect = UIScreen.main.bounds
+var edges = UIApplication.shared.windows.first?.safeAreaInsets
 
 struct BubbleView: View {
+    @ObservedObject var bubblesViewModel: BubblesViewModel
     var text: String
     var color: String
+    var username: String
+    var likes: Int
+    var likedBy: [String]
+    var timeStamp: Date
+    var formatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .medium
+        return dateFormatter
+    }
+    let user = Auth.auth().currentUser
+
 
     @State private var enlarge = false
 
-    var size: CGFloat
-    var y: CGFloat
-    var x: CGFloat
     var body: some View {
 
-        ZStack {
-            Circle()
+        VStack(spacing: 10) {
+            HStack {
+                Text(username)
+                    .fontWeight(.semibold)
+                Spacer()
 
+                Text(formatter.string(from: timeStamp))
+                    .font(.footnote)
+                    .foregroundColor(.gray)
+            }
 
-                .foregroundColor(Color(hex: color))
-            Text(text.trimmingCharacters(in: .whitespacesAndNewlines))
-                .padding()
-                .font(enlarge ? .title : .title2)
-                .foregroundColor(.white)
-                .multilineTextAlignment(.center)
-                .lineLimit(enlarge ? .none : 3)
-                .scaleEffect(0.5)
+            ZStack {
+                RoundedRectangle(cornerRadius: 15)
+                    .foregroundColor(Color(hex: color))
+
+                Text(text)
+                    .lineLimit(3)
+
+                    .multilineTextAlignment(.center)
+                    .font(.title3)
+
+                    .padding()
+            }.frame(height: 300)
+                .onTapGesture(count: 2) {
+                    likeUnlike()
+                }
+//            onTapGesture {
+//                self.enlarge.toggle()
+//            }
+            HStack {
+                Image(systemName:
+                        likedBy.contains(user!.uid) ? "suit.heart.fill" :
+                        "suit.heart")
+                    .foregroundColor(Color(hex: color))
+                    .onTapGesture {
+                       likeUnlike()
+                    }
+                Text(String(likes))
+                
+            }
+            .animation(.spring())
 
         }
-        .scaleEffect(enlarge ? size * 2 : size)
-        .offset(x:  x, y: y)
+        .frame(width:  rect.width - 30)
+        .animation(.default)
 
-        
-        
+    }
+    func likeUnlike() {
+        withAnimation(.spring()) {
+            if !likedBy.contains(user!.uid) {
+                bubblesViewModel.likeBubble(text: text, handler: {})
+            } else {
+                bubblesViewModel.unlikeBubble(text: text, handler: {})
 
-
-        .onTapGesture(count: 2) {print("Double tapped!")}
-        .onTapGesture {
-            withAnimation(.spring()) {
-            self.enlarge.toggle()
             }
         }
 
-
-            
     }
 }
 
 struct BubbleView_Previews: PreviewProvider {
     static var previews: some View {
-        BubbleView(text: "Today I learned that Jazz is stadadasdadsasdsasssddasdadadadasdadasdasdasdsadasdasdasdasadtistically the hardest word to guesssdsadasdasdad indsadasdasdasdasdasdasdasdasd hangman", color: color.randomElement()!, size: 1, y: 0, x:  0)
+        BubbleView(bubblesViewModel: BubblesViewModel(), text: "Today I learned that Jazz is stadadasdadsasdsasssddasdadadadasdadasdasdasdsadasdasdasdasadtistically the hardest word to guesssdsadasdasdad indsadasdasdasdasdasdasdasdasd hangman", color: color.randomElement()!, username: "@sadada", likes: 99, likedBy: [""], timeStamp: Date())
+
     }
+
 }

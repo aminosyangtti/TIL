@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B137FD5DC8E543DBB3E9F07C /* Pods_TIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E99C53C50C8F4CE704D12A5 /* Pods_TIL.framework */; };
-		BD184DBE26DCDB4000D85123 /* GridStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD184DBD26DCDB4000D85123 /* GridStackView.swift */; };
 		BD184DC026DCE11500D85123 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD184DBF26DCE11500D85123 /* User.swift */; };
 		BD184DC326DCE19600D85123 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD184DC226DCE19600D85123 /* SessionStore.swift */; };
 		BD184DC526DD579200D85123 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD184DC426DD579200D85123 /* Bubble.swift */; };
@@ -21,21 +20,26 @@
 		BD1A9FBC26DBAC0700B9E403 /* CustomMultilineTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FBB26DBAC0700B9E403 /* CustomMultilineTextFieldView.swift */; };
 		BD1A9FBE26DBAE0100B9E403 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FBD26DBAE0100B9E403 /* VisualEffectView.swift */; };
 		BD1A9FC026DBBD4200B9E403 /* KeyResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FBF26DBBD4200B9E403 /* KeyResponder.swift */; };
-		BD1A9FC626DBC75600B9E403 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FC526DBC75600B9E403 /* AddButton.swift */; };
+		BD1A9FC626DBC75600B9E403 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FC526DBC75600B9E403 /* HeaderView.swift */; };
 		BD1A9FC826DBC87900B9E403 /* DimViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FC726DBC87900B9E403 /* DimViewModifier.swift */; };
 		BD1A9FCC26DBCC0D00B9E403 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FCB26DBCC0C00B9E403 /* BubbleView.swift */; };
 		BD1A9FCE26DBE54B00B9E403 /* BubblesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A9FCD26DBE54B00B9E403 /* BubblesContentView.swift */; };
-		BD6D4E7126DE313800531553 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6D4E7026DE313800531553 /* CustomTextField.swift */; };
+		BD8DFDA226E7EA5500E1061E /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DFDA126E7EA5500E1061E /* UsersViewModel.swift */; };
+		BD8DFDA426E7F88B00E1061E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DFDA326E7F88B00E1061E /* AppDelegate.swift */; };
+		BD8DFDA726E7F8A700E1061E /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DFDA526E7F8A600E1061E /* PushNotificationManager.swift */; };
+		BD8DFDA826E7F8A700E1061E /* PushNotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DFDA626E7F8A700E1061E /* PushNotificationSender.swift */; };
+		BD8DFDAA26E7F9AA00E1061E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD8DFDA926E7F9AA00E1061E /* GoogleService-Info.plist */; };
 		BD92391E26DB7D52003A02EF /* TILApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92391D26DB7D52003A02EF /* TILApp.swift */; };
 		BD92392026DB7D52003A02EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92391F26DB7D52003A02EF /* ContentView.swift */; };
 		BD92392226DB7D53003A02EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD92392126DB7D53003A02EF /* Assets.xcassets */; };
 		BD92392526DB7D53003A02EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD92392426DB7D53003A02EF /* Preview Assets.xcassets */; };
+		BDB3662E26E77C5D00A98D96 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB3662D26E77C5D00A98D96 /* SignUpView.swift */; };
+		BDB3663026E7838700A98D96 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB3662F26E7838700A98D96 /* HomeScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6E99C53C50C8F4CE704D12A5 /* Pods_TIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		803AB92BBB370D96BFC346DF /* Pods-TIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TIL.release.xcconfig"; path = "Target Support Files/Pods-TIL/Pods-TIL.release.xcconfig"; sourceTree = "<group>"; };
-		BD184DBD26DCDB4000D85123 /* GridStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStackView.swift; sourceTree = "<group>"; };
 		BD184DBF26DCE11500D85123 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BD184DC226DCE19600D85123 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		BD184DC426DD579200D85123 /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
@@ -48,17 +52,23 @@
 		BD1A9FBB26DBAC0700B9E403 /* CustomMultilineTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMultilineTextFieldView.swift; sourceTree = "<group>"; };
 		BD1A9FBD26DBAE0100B9E403 /* VisualEffectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		BD1A9FBF26DBBD4200B9E403 /* KeyResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyResponder.swift; sourceTree = "<group>"; };
-		BD1A9FC526DBC75600B9E403 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		BD1A9FC526DBC75600B9E403 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		BD1A9FC726DBC87900B9E403 /* DimViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimViewModifier.swift; sourceTree = "<group>"; };
 		BD1A9FCB26DBCC0C00B9E403 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		BD1A9FCD26DBE54B00B9E403 /* BubblesContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesContentView.swift; sourceTree = "<group>"; };
-		BD6D4E7026DE313800531553 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		BD8DFDA126E7EA5500E1061E /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		BD8DFDA326E7F88B00E1061E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD8DFDA526E7F8A600E1061E /* PushNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
+		BD8DFDA626E7F8A700E1061E /* PushNotificationSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationSender.swift; sourceTree = "<group>"; };
+		BD8DFDA926E7F9AA00E1061E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD92391A26DB7D52003A02EF /* TIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD92391D26DB7D52003A02EF /* TILApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILApp.swift; sourceTree = "<group>"; };
 		BD92391F26DB7D52003A02EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BD92392126DB7D53003A02EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD92392426DB7D53003A02EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD92392626DB7D53003A02EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDB3662D26E77C5D00A98D96 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		BDB3662F26E7838700A98D96 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		F0319D9298D8044360E71F89 /* Pods-TIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TIL.debug.xcconfig"; path = "Target Support Files/Pods-TIL/Pods-TIL.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,8 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				BD92391F26DB7D52003A02EF /* ContentView.swift */,
-				BD1A9FC526DBC75600B9E403 /* AddButton.swift */,
+				BDB3662F26E7838700A98D96 /* HomeScreenView.swift */,
+				BD1A9FC526DBC75600B9E403 /* HeaderView.swift */,
 				BD184DC826DD600F00D85123 /* SignInView.swift */,
+				BDB3662D26E77C5D00A98D96 /* SignUpView.swift */,
 				BD1A9FCB26DBCC0C00B9E403 /* BubbleView.swift */,
 				BD1A9FCD26DBE54B00B9E403 /* BubblesContentView.swift */,
 				BD1A9FB926DBABA500B9E403 /* AddTILBubbleView.swift */,
@@ -118,9 +130,7 @@
 		BD1A9FC226DBBFC400B9E403 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				BD184DBD26DCDB4000D85123 /* GridStackView.swift */,
 				BD1A9FBB26DBAC0700B9E403 /* CustomMultilineTextFieldView.swift */,
-				BD6D4E7026DE313800531553 /* CustomTextField.swift */,
 				BD1A9FBD26DBAE0100B9E403 /* VisualEffectView.swift */,
 			);
 			path = CustomViews;
@@ -132,6 +142,9 @@
 				BD1A9FBF26DBBD4200B9E403 /* KeyResponder.swift */,
 				BD184DC226DCE19600D85123 /* SessionStore.swift */,
 				BD184DC626DD582700D85123 /* BubblesViewModel.swift */,
+				BD8DFDA126E7EA5500E1061E /* UsersViewModel.swift */,
+				BD8DFDA526E7F8A600E1061E /* PushNotificationManager.swift */,
+				BD8DFDA626E7F8A700E1061E /* PushNotificationSender.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -183,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				BD92391D26DB7D52003A02EF /* TILApp.swift */,
+				BD8DFDA326E7F88B00E1061E /* AppDelegate.swift */,
 				BD184DC126DCE16700D85123 /* Models */,
 				BD1A9FC326DBBFE500B9E403 /* ViewModels */,
 				BD1A9FC126DBBFAA00B9E403 /* Views */,
@@ -190,6 +204,7 @@
 				BD1A9FCA26DBCB0F00B9E403 /* Extensions */,
 				BD92392126DB7D53003A02EF /* Assets.xcassets */,
 				BD92392626DB7D53003A02EF /* Info.plist */,
+				BD8DFDA926E7F9AA00E1061E /* GoogleService-Info.plist */,
 				BD92392326DB7D53003A02EF /* Preview Content */,
 			);
 			path = TIL;
@@ -214,6 +229,7 @@
 				BD92391626DB7D52003A02EF /* Sources */,
 				BD92391726DB7D52003A02EF /* Frameworks */,
 				BD92391826DB7D52003A02EF /* Resources */,
+				7DCA012FDF24F3F2038CF157 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,12 +279,30 @@
 			files = (
 				BD92392526DB7D53003A02EF /* Preview Assets.xcassets in Resources */,
 				BD92392226DB7D53003A02EF /* Assets.xcassets in Resources */,
+				BD8DFDAA26E7F9AA00E1061E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7DCA012FDF24F3F2038CF157 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TIL/Pods-TIL-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TIL/Pods-TIL-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TIL/Pods-TIL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FA7B76868EC3892EDF449A11 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,14 +332,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD8DFDA726E7F8A700E1061E /* PushNotificationManager.swift in Sources */,
+				BD8DFDA426E7F88B00E1061E /* AppDelegate.swift in Sources */,
 				BD1A9FBA26DBABA500B9E403 /* AddTILBubbleView.swift in Sources */,
+				BD8DFDA226E7EA5500E1061E /* UsersViewModel.swift in Sources */,
 				BD1A9FC826DBC87900B9E403 /* DimViewModifier.swift in Sources */,
 				BD1A9FBC26DBAC0700B9E403 /* CustomMultilineTextFieldView.swift in Sources */,
 				BD1A9FA826DB7E1800B9E403 /* SplashScreen.swift in Sources */,
-				BD6D4E7126DE313800531553 /* CustomTextField.swift in Sources */,
-				BD1A9FC626DBC75600B9E403 /* AddButton.swift in Sources */,
+				BD8DFDA826E7F8A700E1061E /* PushNotificationSender.swift in Sources */,
+				BD1A9FC626DBC75600B9E403 /* HeaderView.swift in Sources */,
 				BD1A9FC026DBBD4200B9E403 /* KeyResponder.swift in Sources */,
 				BD1A9FCC26DBCC0D00B9E403 /* BubbleView.swift in Sources */,
+				BDB3663026E7838700A98D96 /* HomeScreenView.swift in Sources */,
 				BD92392026DB7D52003A02EF /* ContentView.swift in Sources */,
 				BD184DC726DD582700D85123 /* BubblesViewModel.swift in Sources */,
 				BD184DC526DD579200D85123 /* Bubble.swift in Sources */,
@@ -313,8 +351,8 @@
 				BD184DC026DCE11500D85123 /* User.swift in Sources */,
 				BD1A9FB226DB84B300B9E403 /* CustomColorInHex+extension.swift in Sources */,
 				BD1A9FBE26DBAE0100B9E403 /* VisualEffectView.swift in Sources */,
+				BDB3662E26E77C5D00A98D96 /* SignUpView.swift in Sources */,
 				BD92391E26DB7D52003A02EF /* TILApp.swift in Sources */,
-				BD184DBE26DCDB4000D85123 /* GridStackView.swift in Sources */,
 				BD1A9FCE26DBE54B00B9E403 /* BubblesContentView.swift in Sources */,
 				BD184DC326DCE19600D85123 /* SessionStore.swift in Sources */,
 				BD1A9FB426DB983F00B9E403 /* SplashBubblesView.swift in Sources */,
@@ -456,7 +494,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TIL.TodayILearned;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TodayILearned.TIL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -479,7 +517,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TIL;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TodayILearned.TIL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

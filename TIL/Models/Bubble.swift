@@ -7,9 +7,11 @@
 
 import Foundation
 
-struct Bubble {
+struct Bubble: Hashable{
     var id: String
     var text: String
     var likedBy: [String]
     var likes: Int
+    var createdBy: String
+    var timeStamp: Date
 }

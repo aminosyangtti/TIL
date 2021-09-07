@@ -9,6 +9,8 @@ import Foundation
 
 struct User: Hashable{
     var uid: String
+    var token: String
     var email: String
+    var username: String
 
 }

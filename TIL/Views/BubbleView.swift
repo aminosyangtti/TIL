@@ -28,6 +28,7 @@ struct BubbleView: View {
     let user = Auth.auth().currentUser
 
     @State private var showDate = false
+    @State private var animationAmount: CGFloat = 1
 
 
     @State private var enlarge = false
@@ -70,9 +71,16 @@ struct BubbleView: View {
                 Image(systemName:
                         likedBy.contains(user!.uid) ? "suit.heart.fill" :
                         "suit.heart")
+                    .scaleEffect(animationAmount)
                     .foregroundColor( likedBy.contains(user!.uid) ? Color(hex: "C23023") : .black)
                     .onTapGesture {
                        likeUnlike()
+                        withAnimation(.spring()) {
+                            self.animationAmount += 0.5
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                self.animationAmount = 1
+                            }
+                        }
                     }
                 Text(String(likes))
                 
@@ -88,10 +96,17 @@ struct BubbleView: View {
         withAnimation(.spring()) {
             if !likedBy.contains(user!.uid) {
                 bubblesViewModel.likeBubble(text: text, handler: {})
+                
             } else {
                 bubblesViewModel.unlikeBubble(text: text, handler: {})
 
             }
+
+            self.animationAmount += 0.8
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.animationAmount = 1
+            }
+
         }
 
     }

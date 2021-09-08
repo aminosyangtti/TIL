@@ -18,12 +18,13 @@ struct SignInView: View {
             ZStack {
                 Color(hex: color[0])
                     .edgesIgnoringSafeArea(.all)
-                VStack(spacing: 10) {
-                    Text("TIL")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .font(.largeTitle)
-                    Spacer()
+                VStack {
+                    
+                    Image("TIL")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: rect.width - 300, height: rect.height - 700, alignment: .center)
+
 
                     Text("Sign in to continue")
                         .fontWeight(.semibold)
@@ -55,6 +56,7 @@ struct SignInView: View {
 
                         NavigationLink(destination:  SignUpView())  { Text("Don't have an account?")
                             .font(.footnote)
+                            .foregroundColor(.black.opacity(0.8))
 
                         }
 
@@ -77,7 +79,7 @@ struct SignInView: View {
 
 
                     }
-
+                    Spacer()
                     Spacer()
                     Spacer()
 

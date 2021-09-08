@@ -16,14 +16,13 @@ struct SignUpView: View {
     @State private var confirmPassword = ""
     var body: some View {
         ZStack {
-            Color(hex: color.randomElement()!)
+            Color(hex: color[1])
                 .edgesIgnoringSafeArea(.all)
-            VStack(spacing: 10) {
-                Text("TIL")
-                    .foregroundColor(.white)
-                    .fontWeight(.bold)
-                    .font(.largeTitle)
-                Spacer()
+            VStack {
+                Image("TIL")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: rect.width - 300, height: rect.height - 700, alignment: .center)
 
                 Text("Create an account")
                     .fontWeight(.semibold)
@@ -94,7 +93,7 @@ struct SignUpView: View {
                     }
 
 
-                    if !email.isEmpty && !password.isEmpty {
+                    if !username.isEmpty && !email.isEmpty && !password.isEmpty && !confirmEmail.isEmpty && !confirmPassword.isEmpty {
                     Button(action: signUp){
 
                         Text("Let's Go!")
@@ -114,9 +113,8 @@ struct SignUpView: View {
 
 
                 }
+                Spacer(minLength: 210)
 
-                Spacer()
-                Spacer()
 
             }.frame(width: rect.width - 30)
         }

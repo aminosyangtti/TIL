@@ -84,7 +84,7 @@ struct SignUpView: View {
                     VStack {
 
 
-                        SecureField("Confirm Password", text: $confirmPassword)
+                        SecureField("Confirm Password", text: $confirmPassword, onCommit: signUp)
                         .foregroundColor(Color(hex: "222F3E"))
                         .padding()
                         .background(Color.white)

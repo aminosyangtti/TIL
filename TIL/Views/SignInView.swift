@@ -47,7 +47,7 @@ struct SignInView: View {
 
 
 
-                        SecureField("Password", text: $password)
+                        SecureField("Password", text: $password, onCommit: signIn)
                             .foregroundColor(Color(hex: "222F3E"))
                             .padding()
                             .background(Color.white)

@@ -15,13 +15,13 @@ struct HeaderView: View {
     var body: some View {
         HStack {
             Image(systemName: showSignout ? "arrowshape.turn.up.backward.circle.fill" : "arrowshape.turn.up.backward.circle")
-                .font(Font.custom("", size: 18).weight(.regular))
+
                 .onTapGesture {
                     withAnimation(.spring()) {showSignout.toggle()}
                 }
             if showSignout {
                 Text("Sign Out")
-                    .font(Font.custom("Avenir", size: 16).weight(.heavy))
+                    .font(Font.custom("Avenir", size: 18).weight(.heavy))
                     .onTapGesture {
                         self.signOut()
                     }

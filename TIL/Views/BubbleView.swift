@@ -48,25 +48,32 @@ struct BubbleView: View {
                         self.showDate.toggle()
                     }
             }
+            .frame(width:  rect.width - 30)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
                     .foregroundColor(Color(hex: color))
 
                 Text(text)
-                    .lineLimit(3)
+                    .lineLimit(enlarge ? nil : 3)
 
                     .multilineTextAlignment(.center)
                     .font(.title3)
+                    .foregroundColor(.white)
 
                     .padding()
-            }.frame(height: 300)
+            }
+            .frame(width:  enlarge ? rect.width : rect.width - 30, height: enlarge ? 600 : 300)
+
+
                 .onTapGesture(count: 2) {
                     likeUnlike()
                 }
-//            onTapGesture {
-//                self.enlarge.toggle()
-//            }
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        self.enlarge.toggle()
+                    }
+            }
             HStack {
                 Image(systemName:
                         likedBy.contains(user!.uid) ? "suit.heart.fill" :
@@ -88,7 +95,7 @@ struct BubbleView: View {
             .animation(.spring())
 
         }
-        .frame(width:  rect.width - 30)
+
         .animation(.default)
 
     }

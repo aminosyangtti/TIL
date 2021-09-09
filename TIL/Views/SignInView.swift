@@ -23,7 +23,8 @@ struct SignInView: View {
                     Image("TIL")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: rect.width - 300, height: rect.height - 700, alignment: .center)
+                        .padding(50)
+                        .padding(.horizontal, 80)
 
 
                     Text("Sign in to continue")
@@ -37,24 +38,26 @@ struct SignInView: View {
 
 
                         TextField("Email/Username", text: $email)
-                            .foregroundColor(Color(hex: "222F3E"))
+
                             .padding()
                             .background(Color.white)
                             .cornerRadius(20.0)
                             .frame( height: 50)
                             .padding(.bottom, 20)
+                            .preferredColorScheme(.light)
 
 
 
 
                         SecureField("Password", text: $password, onCommit: signIn)
-                            .foregroundColor(Color(hex: "222F3E"))
+
                             .padding()
                             .background(Color.white)
                             .cornerRadius(20.0)
                             .frame( height: 50)
+                            .preferredColorScheme(.light)
 
-                        NavigationLink(destination:  SignUpView())  { Text("Don't have an account?")
+                        NavigationLink(destination:  SignUpView().preferredColorScheme(.light))  { Text("Don't have an account?")
                             .font(.footnote)
                             .foregroundColor(.black.opacity(0.8))
 
@@ -85,7 +88,7 @@ struct SignInView: View {
 
                 }.frame(width: rect.width - 30)
 
-            }
+            }.preferredColorScheme(.light)
         }
 
     }

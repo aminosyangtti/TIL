@@ -13,7 +13,7 @@ struct BubblesContentView: View {
 
     var body: some View {
         ScrollView(.vertical, showsIndicators:  false) {
-            LazyVStack(spacing: 25) {
+            VStack(spacing: 25) {
                 ForEach(bubblesViewModel.bubbles, id: \.id) { bubble in
                     BubbleView(bubblesViewModel: bubblesViewModel, text: bubble.text, color: color.randomElement()!, username: "@\(bubble.createdBy)", likes: bubble.likes, likedBy: bubble.likedBy, timeStamp: bubble.timeStamp)
 

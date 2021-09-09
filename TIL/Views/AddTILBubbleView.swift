@@ -27,6 +27,7 @@ struct AddTILBubbleView: View {
             MultilineTextField(shouldShowPlaceholder: State<Bool>(initialValue: AddTILBubbleView.text.isEmpty), "Today, I learned...", nextResponder: $isFirstResponder, isResponder: $isFirstResponder, keyboard: .default, text: AddTILBubbleView.textBinding)
                 .background(VisualEffectView(style: .systemMaterialLight).opacity(0.3))
                 .cornerRadius(10.0)
+                .preferredColorScheme(.light)
 
 
             ZStack {
@@ -46,6 +47,7 @@ struct AddTILBubbleView: View {
         .padding()
         .background( VisualEffectView(style:  .systemUltraThinMaterialDark).opacity(1))
         .onAppear(perform: {print("DEBUG: \(usersViewModel.users)")})
+        .preferredColorScheme(.light)
 
     }
     func share() {

@@ -26,7 +26,7 @@ struct ContentView: View {
             if !showSplashScreen {
 
             HomeScreenView()
-                    .fullScreenCover(isPresented: $sessionStore.isAnon, content: {SignInView(usersViewModel: usersViewModel)})
+                    .fullScreenCover(isPresented: $sessionStore.isAnon, content: {SignInView(usersViewModel: usersViewModel).preferredColorScheme(.light)})
             }
 
             }

@@ -32,11 +32,13 @@ struct HomeScreenView: View {
                     .padding(50)
                     .transition(.scale)
             }
-        }.onAppear(perform: {
+        }
+        .onAppear(perform: {
             DispatchQueue.global(qos: .background).async {
                 print("DEBUG: \(bubblesViewModel.bubbles)")
             }
            })
+        .preferredColorScheme(.light)
     }
 }
 

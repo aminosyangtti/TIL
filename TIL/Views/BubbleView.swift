@@ -55,7 +55,7 @@ struct BubbleView: View {
                     .foregroundColor(Color(hex: color))
 
                 Text(text)
-                    .lineLimit(enlarge ? nil : 3)
+                    .lineLimit(enlarge ? nil : 5)
 
                     .multilineTextAlignment(.center)
                     .font(.title3)

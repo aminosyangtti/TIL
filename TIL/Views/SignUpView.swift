@@ -22,7 +22,7 @@ struct SignUpView: View {
                 Image("TIL")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: rect.width - 300, height: rect.height - 700, alignment: .center)
+                    .frame(width: 100, height: 100, alignment: .center)
 
                 Text("Create an account")
                     .fontWeight(.semibold)
@@ -35,11 +35,12 @@ struct SignUpView: View {
                     VStack {
 
                         TextField("Username", text: $username)
-                        .foregroundColor(Color(hex: "222F3E"))
+
                         .padding()
                         .background(Color.white)
                         .cornerRadius(20.0)
                         .frame( height: 50)
+                            .preferredColorScheme(.light)
 
                     }.padding(.bottom, 20)
 
@@ -47,11 +48,12 @@ struct SignUpView: View {
 
 
                         TextField("Email", text: $email)
-                        .foregroundColor(Color(hex: "222F3E"))
+
                         .padding()
                         .background(Color.white)
                         .cornerRadius(20.0)
                         .frame( height: 50)
+                            .preferredColorScheme(.light)
 
                     }
                     .padding(.bottom, 20)
@@ -59,11 +61,12 @@ struct SignUpView: View {
 
 
                         TextField("Confirm Email", text: $confirmEmail)
-                        .foregroundColor(Color(hex: "222F3E"))
+
                         .padding()
                         .background(Color.white)
                         .cornerRadius(20.0)
                         .frame( height: 50)
+                            .preferredColorScheme(.light)
 
                     }
                     .padding(.bottom, 20)
@@ -74,22 +77,24 @@ struct SignUpView: View {
 
                         SecureField("Password", text: $password)
 
-                        .foregroundColor(Color(hex: "222F3E"))
+
                         .padding()
                         .background(Color.white)
                         .cornerRadius(20.0)
                         .frame( height: 50)
+                            .preferredColorScheme(.light)
                     }
                     .padding(.bottom, 20)
                     VStack {
 
 
                         SecureField("Confirm Password", text: $confirmPassword, onCommit: signUp)
-                        .foregroundColor(Color(hex: "222F3E"))
+     
                         .padding()
                         .background(Color.white)
                         .cornerRadius(20.0)
                         .frame( height: 50)
+                            .preferredColorScheme(.light)
                     }
 
 
@@ -112,11 +117,12 @@ struct SignUpView: View {
 
 
 
-                }
-                Spacer(minLength: 210)
+                }.padding(.bottom, 50)
+                Spacer(minLength: 20)
 
 
             }.frame(width: rect.width - 30)
+            .preferredColorScheme(.light)
         }
 
     }

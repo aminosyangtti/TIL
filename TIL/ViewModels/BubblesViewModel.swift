@@ -43,8 +43,8 @@ class BubblesViewModel: ObservableObject {
         db.collection("bubbles").addDocument(data:
                                                     [
                                                         "text": text,
-                                                        "likedBy": FieldValue.arrayUnion([self.user!.uid]),
-                                                        "likes": 1,
+                                                        "likedBy": FieldValue.arrayUnion([""]),
+                                                        "likes": 0,
                                                         "createdBy": username,
                                                         "timeStamp" : Date()
                                                         ]) { err in

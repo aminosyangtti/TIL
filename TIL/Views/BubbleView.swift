@@ -54,12 +54,13 @@ struct BubbleView: View {
                     .foregroundColor(Color(hex: color))
 
                 Text(text)
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .lineLimit(enlarge ? nil : 5)
 
                     .multilineTextAlignment(.center)
                     .font(.title3)
-                    .foregroundColor(.white)
 
+                    .foregroundColor(.white)
                     .padding()
             }
             .frame(width:  enlarge ? rect.width : rect.width - 30, height: enlarge ? 600 : 300)

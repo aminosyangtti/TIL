@@ -21,12 +21,13 @@ struct BubblesContentView: View {
                             isMostPopular.toggle()
                         }
                     .font(.footnote)
+                    .foregroundColor(.blue)
                     Spacer()
                 }
                 .frame(width:  rect.width - 30)
 
                 ForEach(isMostPopular ? bubblesViewModel.bubbles.sorted{$0.likes > $1.likes} : bubblesViewModel.bubbles, id: \.id) { bubble in
-                    BubbleView(bubblesViewModel: bubblesViewModel, text: bubble.text, color: color.randomElement()!, username: "@\(bubble.createdBy)", likes: bubble.likes, likedBy: bubble.likedBy, timeStamp: bubble.timeStamp)
+                    BubbleView(bubblesViewModel: bubblesViewModel, text: bubble.text, color: bubble.color, username: "@\(bubble.createdBy)", likes: bubble.likes, likedBy: bubble.likedBy, timeStamp: bubble.timeStamp)
 
                 }
             }

@@ -14,4 +14,5 @@ struct Bubble: Hashable{
     var likes: Int
     var createdBy: String
     var timeStamp: Date
+    var color: String
 }

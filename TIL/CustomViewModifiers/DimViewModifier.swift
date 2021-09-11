@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct DimViewModifier: ViewModifier {
-    @Binding var binding: Bool
+    @Binding var dim: Bool
 
     func body(content: Content) -> some View {
         content
             .overlay(Rectangle()
-                        .foregroundColor(binding ? .gray.opacity(0.3): .clear)
+                        .foregroundColor(dim ? .gray.opacity(0.5): .clear)
                         .ignoresSafeArea()
                         .onTapGesture {
                 withAnimation(.spring()) {
-                    self.binding = false
+                    self.dim = false
                 }
             })
     }
@@ -25,7 +25,7 @@ struct DimViewModifier: ViewModifier {
 
 extension View {
     func dimView(_ binding: Binding<Bool>) -> some View {
-        self.modifier(DimViewModifier(binding: binding))
+        self.modifier(DimViewModifier(dim: binding))
     }
 }
 

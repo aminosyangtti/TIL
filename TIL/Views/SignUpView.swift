@@ -16,7 +16,7 @@ struct SignUpView: View {
     @State private var confirmPassword = ""
     var body: some View {
         ZStack {
-            Color(hex: color[1])
+            Color(hex: colors[1])
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 Image("TIL")

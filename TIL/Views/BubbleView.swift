@@ -30,7 +30,6 @@ struct BubbleView: View {
     @State private var showDate = false
     @State private var animationAmount: CGFloat = 1
 
-
     @State private var enlarge = false
 
     var body: some View {
@@ -121,7 +120,7 @@ struct BubbleView: View {
 
 struct BubbleView_Previews: PreviewProvider {
     static var previews: some View {
-        BubbleView(bubblesViewModel: BubblesViewModel(), text: "Today I learned that Jazz is stadadasdadsasdsasssddasdadadadasdadasdasdasdsadasdasdasdasadtistically the hardest word to guesssdsadasdasdad indsadasdasdasdasdasdasdasdasd hangman", color: color.randomElement()!, username: "@sadada", likes: 99, likedBy: [""], timeStamp: Date())
+        BubbleView(bubblesViewModel: BubblesViewModel(), text: "Today I learned that Jazz is stadadasdadsasdsasssddasdadadadasdadasdasdasdsadasdasdasdasadtistically the hardest word to guesssdsadasdasdad indsadasdasdasdasdasdasdasdasd hangman", color: colors.randomElement()!, username: "@sadada", likes: 99, likedBy: [""], timeStamp: Date())
 
     }
 

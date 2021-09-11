@@ -29,7 +29,7 @@ struct HomeScreenView: View {
             if showAddBubble {
                 AddTILBubbleView(showAddBubble: $showAddBubble, bubblesViewModel: bubblesViewModel, usersViewModel: usersViewModel)
                     .cornerRadius(24)
-                    .padding(50)
+                    .padding(25)
                     .transition(.scale)
             }
         }

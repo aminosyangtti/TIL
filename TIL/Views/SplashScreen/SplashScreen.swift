@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-var color = ["75BF97", "A77EBF", "76BF6B", "BF6158", "AFBF62", "7E9CBF"].shuffled()
-
+let colors = ["75BF97", "A77EBF", "76BF6B", "BF6158", "AFBF62", "7E9CBF"].shuffled()
+let lightGreyColor = Color(hex: "D4DDE7")
+let lShadowColor            = Color(.displayP3, red: 242/255, green: 242/255, blue: 1, opacity: 1.0)
 
 struct SplashScreen: View {
     @State private var show = false

@@ -31,14 +31,15 @@ class BubblesViewModel: ObservableObject {
                 let createdBy = data["createdBy"] as? String ?? ""
                 let timePosted = data["timeStamp"] as? Timestamp ?? nil
                 let timeStamp = timePosted!.dateValue()
-                return Bubble(id: docId, text: text, likedBy: likedBy, likes: likes, createdBy: createdBy, timeStamp: timeStamp)
+                let color = data["color"] as? String ?? colors.randomElement()!
+                return Bubble(id: docId, text: text, likedBy: likedBy, likes: likes, createdBy: createdBy, timeStamp: timeStamp, color: color)
 
             })
         })
         }
     }
 
-    func createBubble(text: String, username: String, handler: @escaping () -> Void) {
+    func createBubble(text: String, username: String, color: String, handler: @escaping () -> Void) {
 
         db.collection("bubbles").addDocument(data:
                                                     [
@@ -46,7 +47,8 @@ class BubblesViewModel: ObservableObject {
                                                         "likedBy": FieldValue.arrayUnion([""]),
                                                         "likes": 0,
                                                         "createdBy": username,
-                                                        "timeStamp" : Date()
+                                                        "timeStamp" : Date(),
+                                                        "color" : color
                                                         ]) { err in
             if let err = err {
                 print(err)

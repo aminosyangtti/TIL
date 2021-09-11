@@ -24,7 +24,7 @@ struct SplashBubblesView: View {
                                     .foregroundColor(.white)
                                     .font(.largeTitle))
                         .padding()
-                        .foregroundColor(Color(hex: color[index]))
+                        .foregroundColor(Color(hex: colors[index]))
                         .opacity(show ? 1 : 0)
                         .scaleEffect(show ? scales[index] : 0)
                         .offset(x: show ? geometry.size.width * x[index] : 0, y: show ? geometry.size.height * y[index] : 600)

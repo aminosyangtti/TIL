@@ -16,21 +16,24 @@ struct AddTILBubbleView: View {
     @Binding var showAddBubble: Bool
     @ObservedObject var bubblesViewModel: BubblesViewModel
     @ObservedObject var usersViewModel: UsersViewModel
+    @State private var selection = colors[0]
 
     var body: some View {
         VStack {
             Text("What did you learn today?")
                 .font(.title)
                 .fontWeight(.bold)
-            
-
-            MultilineTextField(shouldShowPlaceholder: State<Bool>(initialValue: AddTILBubbleView.text.isEmpty), "Today, I learned...", nextResponder: $isFirstResponder, isResponder: $isFirstResponder, keyboard: .default, text: AddTILBubbleView.textBinding)
-                .background(VisualEffectView(style: .systemMaterialLight).opacity(0.3))
+                .padding(.bottom, 15)
+            ColorSwatchView(selection: $selection)
+                .padding(.bottom, 15)
+            MultilineTextField(shouldShowPlaceholder: State<Bool>(initialValue: AddTILBubbleView.text.isEmpty), "Today, I learned...", nextResponder: .constant(nil), isResponder: $isFirstResponder, keyboard: .default, text: AddTILBubbleView.textBinding)
+                .background(lightGreyColor)
                 .cornerRadius(10.0)
+                .padding(.bottom, 15)
                 .preferredColorScheme(.light)
 
 
-            ZStack {
+
                 Button(action: share) {
                     Text("Share")
                         .padding(.horizontal, 15)
@@ -41,11 +44,10 @@ struct AddTILBubbleView: View {
                         .cornerRadius(20)
                 }
 
-
-            }
         }
         .padding()
-        .background( VisualEffectView(style:  .systemUltraThinMaterialDark).opacity(1))
+        .background(Color.white)
+        .shadow(color: lShadowColor, radius: 24)
         .onAppear(perform: {print("DEBUG: \(usersViewModel.users)")})
         .preferredColorScheme(.light)
 
@@ -56,7 +58,8 @@ struct AddTILBubbleView: View {
 
             for userID in usersViewModel.users {
                 if userID.uid == self.user!.uid {
-                    bubblesViewModel.createBubble(text: AddTILBubbleView.text, username: userID.username, handler: {})
+                    bubblesViewModel.createBubble(text: AddTILBubbleView.text, username: userID.username, color: selection, handler: {})
+                    AddTILBubbleView.text = ""
                 }
             }
 

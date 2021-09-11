@@ -16,7 +16,7 @@ struct SignInView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(hex: color[0])
+                Color(hex: colors[0])
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     

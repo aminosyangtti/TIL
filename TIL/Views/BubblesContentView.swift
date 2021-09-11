@@ -10,11 +10,22 @@ import SwiftUI
 
 struct BubblesContentView: View {
     @ObservedObject var bubblesViewModel: BubblesViewModel
-
+    @State private var isMostPopular = false
     var body: some View {
         ScrollView(.vertical, showsIndicators:  false) {
             VStack(spacing: 25) {
-                ForEach(bubblesViewModel.bubbles, id: \.id) { bubble in
+
+                HStack {
+                    Text(isMostPopular ? "Most Popular" : "Most Recent")
+                        .onTapGesture {
+                            isMostPopular.toggle()
+                        }
+                    .font(.footnote)
+                    Spacer()
+                }
+                .frame(width:  rect.width - 30)
+
+                ForEach(isMostPopular ? bubblesViewModel.bubbles.sorted{$0.likes > $1.likes} : bubblesViewModel.bubbles, id: \.id) { bubble in
                     BubbleView(bubblesViewModel: bubblesViewModel, text: bubble.text, color: color.randomElement()!, username: "@\(bubble.createdBy)", likes: bubble.likes, likedBy: bubble.likedBy, timeStamp: bubble.timeStamp)
 
                 }

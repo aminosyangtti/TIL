@@ -57,6 +57,7 @@
 		BD1A9FC726DBC87900B9E403 /* DimViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimViewModifier.swift; sourceTree = "<group>"; };
 		BD1A9FCB26DBCC0C00B9E403 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		BD1A9FCD26DBE54B00B9E403 /* BubblesContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesContentView.swift; sourceTree = "<group>"; };
+		BD33555F26ED28A900AF6325 /* TIL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TIL.entitlements; sourceTree = "<group>"; };
 		BD8DFDA126E7EA5500E1061E /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		BD8DFDA326E7F88B00E1061E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD8DFDA526E7F8A600E1061E /* PushNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
@@ -198,6 +199,7 @@
 		BD92391C26DB7D52003A02EF /* TIL */ = {
 			isa = PBXGroup;
 			children = (
+				BD33555F26ED28A900AF6325 /* TIL.entitlements */,
 				BD92391D26DB7D52003A02EF /* TILApp.swift */,
 				BD8DFDA326E7F88B00E1061E /* AppDelegate.swift */,
 				BD184DC126DCE16700D85123 /* Models */,
@@ -488,8 +490,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TIL/TIL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"TIL/Preview Content\"";
 				DEVELOPMENT_TEAM = 82VLD4N55H;
 				ENABLE_PREVIEWS = YES;
@@ -512,8 +515,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TIL/TIL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"TIL/Preview Content\"";
 				DEVELOPMENT_TEAM = 82VLD4N55H;
 				ENABLE_PREVIEWS = YES;

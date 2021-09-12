@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SignUpView: View {
     @ObservedObject var sessionStore = SessionStore()
+    @ObservedObject var usersViewModel = UsersViewModel()
     @State private var username = ""
     @State private var email = ""
     @State private var password = ""
@@ -127,27 +128,31 @@ struct SignUpView: View {
 
     }
     func signUp() {
-        if self.email == self.confirmEmail && self.password == self.confirmPassword && self.username != "" {
-            sessionStore.signUp(email: email, username: username, password: password)
+        if usersViewModel.users.contains(where: {$0.username.lowercased() == self.username.lowercased()}) || self.email != self.confirmEmail ||  self.password != self.confirmPassword || self.username == "" {
 
-
-        }
-        else {
-            if self.email != self.confirmEmail {
+            if usersViewModel.users.contains(where: {$0.username.lowercased() == self.username.lowercased()}) {
+                sessionStore.alertMessage = "The username you entered already exists!"
+            }
+             if self.email != self.confirmEmail {
                 sessionStore.alertMessage = "The email addresses you entered don't match."
 
             }
-            if self.password != self.confirmPassword {
+             if self.password != self.confirmPassword {
                 sessionStore.alertMessage = "The passwords you entered don't match."
             }
 
-            if self.username == "" {
+              if self.username == "" {
                 sessionStore.alertMessage = "Please enter your username."
             }
-
             sessionStore.showAlert = true
 
+
+        } else {
+            sessionStore.signUp(email: email, username: username, password: password)
         }
+
+
+
     }
 }
 

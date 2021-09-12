@@ -17,6 +17,7 @@ struct AddTILBubbleView: View {
     @ObservedObject var bubblesViewModel: BubblesViewModel
     @ObservedObject var usersViewModel: UsersViewModel
     @State private var selection = colors[0]
+    @Binding var isHomeTapped: Bool
 
     var body: some View {
         VStack {
@@ -60,6 +61,7 @@ struct AddTILBubbleView: View {
                 if userID.uid == self.user!.uid {
                     bubblesViewModel.createBubble(text: AddTILBubbleView.text, username: userID.username, color: selection, handler: {})
                     AddTILBubbleView.text = ""
+                    self.isHomeTapped.toggle()
                 }
             }
 
@@ -71,6 +73,6 @@ struct AddTILBubbleView: View {
 
 struct AddTILBubbleView_Previews: PreviewProvider {
     static var previews: some View {
-        AddTILBubbleView(showAddBubble: .constant(true), bubblesViewModel: BubblesViewModel(), usersViewModel: UsersViewModel())
+        AddTILBubbleView(showAddBubble: .constant(true), bubblesViewModel: BubblesViewModel(), usersViewModel: UsersViewModel(), isHomeTapped: .constant(false))
     }
 }

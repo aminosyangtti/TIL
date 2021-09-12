@@ -11,6 +11,7 @@ struct HeaderView: View {
     @Binding var showAddBubble: Bool
     @ObservedObject var sessionStore = SessionStore()
     @State private var showSignout = false
+    @Binding var isHomeTapped: Bool
     
     var body: some View {
         HStack {
@@ -26,7 +27,15 @@ struct HeaderView: View {
                         self.signOut()
                     }
             }
-
+            Spacer()
+            Text("TIL")
+                .fontWeight(.black)
+                .font(.title)
+                .foregroundColor(Color(hex: colors[0]))
+                .onTapGesture {
+                    self.isHomeTapped.toggle()
+                }
+            
             Spacer()
             VStack {
                 Button(action: {
@@ -51,6 +60,6 @@ struct HeaderView: View {
 
 struct AddButton_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView(showAddBubble: .constant(true))
+        HeaderView(showAddBubble: .constant(true), isHomeTapped: .constant(false))
     }
 }

@@ -11,6 +11,7 @@ struct HomeScreenView: View {
     @State private var showAddBubble = false
     @ObservedObject var bubblesViewModel  = BubblesViewModel()
     @ObservedObject var usersViewModel = UsersViewModel()
+    @State private var isHomeTapped = false
     init() {
         bubblesViewModel.fetchData()
         usersViewModel.fetchData()
@@ -19,15 +20,15 @@ struct HomeScreenView: View {
     var body: some View {
         ZStack {
             VStack {
-            HeaderView(showAddBubble: $showAddBubble)
+                HeaderView(showAddBubble: $showAddBubble, isHomeTapped: $isHomeTapped)
                     .padding(.vertical, 15)
-            BubblesContentView(bubblesViewModel: bubblesViewModel)
+                BubblesContentView(bubblesViewModel: bubblesViewModel, isHomeTapped: $isHomeTapped)
             }
             .dimView($showAddBubble)
 
 
             if showAddBubble {
-                AddTILBubbleView(showAddBubble: $showAddBubble, bubblesViewModel: bubblesViewModel, usersViewModel: usersViewModel)
+                AddTILBubbleView(showAddBubble: $showAddBubble, bubblesViewModel: bubblesViewModel, usersViewModel: usersViewModel, isHomeTapped: $isHomeTapped)
                     .cornerRadius(24)
                     .padding(25)
                     .transition(.scale)

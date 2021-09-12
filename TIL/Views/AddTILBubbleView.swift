@@ -28,6 +28,7 @@ struct AddTILBubbleView: View {
                 .padding(.bottom, 15)
             MultilineTextField(shouldShowPlaceholder: State<Bool>(initialValue: AddTILBubbleView.text.isEmpty), "Today, I learned...", nextResponder: $isFirstResponder, isResponder: $isFirstResponder, keyboard: .default, text: AddTILBubbleView.textBinding)
                 .background(lightGreyColor)
+
                 .cornerRadius(10.0)
                 .padding(.bottom, 15)
                 .preferredColorScheme(.light)
@@ -47,8 +48,7 @@ struct AddTILBubbleView: View {
         }
         .padding()
         .background(Color.white)
-        .shadow(color: lShadowColor, radius: 24)
-        .onAppear(perform: {print("DEBUG: \(usersViewModel.users)")})
+
         .preferredColorScheme(.light)
 
     }
